@@ -24,5 +24,30 @@ public class Main {
         for (int i = 0; i < scores.length; i++) {
             System.out.println(scores[i]);
         }
+
+        // 验证
+        Array arr1 = new Array(20);
+        for (int i = 0; i < 10; i++) {
+            arr1.addLast(i);
+        }
+        System.out.println(arr1);
+
+        arr1.add(1, 100);
+        System.out.println(arr1);
+
+        arr1.addFirst(-1);
+        System.out.println(arr1);
+        // [-1, 0, 100, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        arr1.remove(2);
+        System.out.println(arr1);
+
+        arr1.removeElement(4);
+        System.out.println(arr1);
+
+        arr1.removeFirst();
+        System.out.println(arr1);
     }
 }
+
+
