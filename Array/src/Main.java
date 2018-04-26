@@ -26,7 +26,8 @@ public class Main {
         }
 
         // 验证
-        Array arr1 = new Array(20);
+        // 泛型，int类型用Integer
+        Array<Integer> arr1 = new Array<>(20);
         for (int i = 0; i < 10; i++) {
             arr1.addLast(i);
         }
