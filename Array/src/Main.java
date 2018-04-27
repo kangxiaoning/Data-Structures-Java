@@ -27,7 +27,7 @@ public class Main {
 
         // 验证
         // 泛型，int类型用Integer
-        Array<Integer> arr1 = new Array<>(20);
+        Array<Integer> arr1 = new Array<>();
         for (int i = 0; i < 10; i++) {
             arr1.addLast(i);
         }
