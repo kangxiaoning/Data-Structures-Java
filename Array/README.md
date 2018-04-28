@@ -105,7 +105,7 @@ removeLast  --> resize      O(n)
     ...
 ```
 
-之前说addLast和removeLast都是每隔n次触发resizt，而不会每次触发resize，但是现在制造了
+之前说addLast和removeLast都是每隔n次触发resize，而不会每次触发resize，但是现在制造了
 一个情景，存在某种情况，每一次都会耗费O(n)复杂度，这就是**复杂度震荡**。在均摊时，我们认为应该
 是O(1)，但是在一些特殊情况下，复杂度窜到O(n)级别。
 
