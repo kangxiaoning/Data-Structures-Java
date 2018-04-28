@@ -51,30 +51,48 @@ public static int sum(int[] nums){      // O(n)
 - 添加操作  O(n)
     
     考虑resize O(n)
-    
+
+```
     - addLast(e)        O(1)
     - addFirst(e)       O(n)
-    - add(index, e)     O(n/2) = O(n)    
+    - add(index, e)     O(n/2) = O(n) 
+```    
+   
 
 - 删除操作  O(n)
 
+```
     - removeLast(e)     O(1)
     - removeFirst(e)    O(n)
     - remove(index, e)  O(n/2) = O(n)
+```
+
 
 - 修改操作
+
+```
     - set(index, e)     O(1)    // 数组最大的优势
+```
+
 
 - 查询操作  O(n)
+
+```
     - get(index)        O(1)
     - contains(e)       O(n)
-    - find(e)           O(n)        
+    - find(e)           O(n)
+
+```
+        
 
 - 总结
+
+```
     - 增：    O(n)
     - 删：    O(n)
     - 改：    已知索引O(1); 未知索引O(n)
     - 查：    已知索引O(1); 未知索引O(n)
+```
     
 # 6. 均摊复杂度和防止复杂度震荡
 

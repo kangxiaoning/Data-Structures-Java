@@ -48,8 +48,12 @@ boolean isEmpty()
 
 ArrayStack<E>
 
+```
 - void push(E)          O(1) 均摊
 - E pop()               O(1) 均摊
 - E peek()              O(1)
 - int getSize()         O(1)
 - boolean isEmpty()     O(1)
+
+```
+
