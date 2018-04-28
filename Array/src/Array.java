@@ -129,7 +129,7 @@ public class Array<E> {
         size--;
         data[size] = null; // 不是必须的，loitering objects != memory leak
 
-        if (size == data.length / 2) {
+        if (size == data.length / 4 && data.length / 2 != 0) {
             resize(data.length / 2);
         }
         return ret;
