@@ -75,3 +75,42 @@ public static int sum(int[] nums){      // O(n)
     - 删：    O(n)
     - 改：    已知索引O(1); 未知索引O(n)
     - 查：    已知索引O(1); 未知索引O(n)
+    
+# 6. 均摊复杂度和防止复杂度震荡
+
+前面知道对于添加操作，时间复杂度是O(n)，虽然对于addLast来说是O(1)，但是由于有resize方
+法，由于resize是O(n)，所以整个添加是O(n)。但是我们不可能每次操作都触发resize。
+
+假设每次添加都是用addLast，9次addLast触发resize，总共进行了17次基本操作，平均来讲，每
+次addLast操作，进行约2次基本操作。
+
+假设capacity=n，n+1次addLast，触发resize，总共进行2n+1次基本操作。
+
+2n+1/n，平均每次addLast操作，进行2次基本操作。
+
+这样均摊计算，意味着addLast操作的时间复杂度是O(1)。
+
+这个例子里，因为最坏的情况不会每次出现，因此这样均摊计算比最坏情况有意义。
+
+同理，removeLast操作，均摊复杂度也是O(1)。
+
+但是当我们同时看addLast和removeLast操作，以当前n/2触发缩容来看，当size为n时，已经装满
+元素，依次执行如下操作：
+
+```
+addLast     --> resize      O(n)
+removeLast  --> resize      O(n)
+addLast     --> resize      O(n)
+removeLast  --> resize      O(n)
+    ...
+```
+
+之前说addLast和removeLast都是每隔n次触发resizt，而不会每次触发resize，但是现在制造了
+一个情景，存在某种情况，每一次都会耗费O(n)复杂度，这就是**复杂度震荡**。在均摊时，我们认为应该
+是O(1)，但是在一些特殊情况下，复杂度窜到O(n)级别。
+
+出现问题的原因： removeLast时resize过于着急（Eager）
+
+解决方案：   Lazy
+
+策略： 当 size == capacity / 4 时，才将capacity减半
