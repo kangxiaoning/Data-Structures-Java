@@ -51,11 +51,7 @@ public class Array<E> {
 
     // 向数组末尾添加一个元素
     public void addLast(E e) {
-        if (size == data.length) {
-            throw new IllegalArgumentException("AddLast failed. Array is full.");
-        }
-        data[size] = e;
-        size++;
+        add(size, e);
     }
 
     public void addFirst(E e) {
