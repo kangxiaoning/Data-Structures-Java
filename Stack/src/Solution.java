@@ -1,3 +1,8 @@
+/**
+ * leetcode题目：https://leetcode-cn.com/problems/valid-parentheses/description/
+ * 方法一：使用java自带的Stack实现
+ */
+
 import java.util.Stack;
 
 class Solution {
@@ -32,7 +37,7 @@ class Solution {
 
         // https://leetcode-cn.com/problems/valid-parentheses/description/
         // 示例
-        
+
         System.out.println((new Solution()).isValid("()"));
         System.out.println((new Solution()).isValid("()[]{}"));
         System.out.println((new Solution()).isValid("(]"));
@@ -40,3 +45,5 @@ class Solution {
         System.out.println((new Solution()).isValid("{[]}"));
     }
 }
+
+
