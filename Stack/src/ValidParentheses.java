@@ -1,6 +1,6 @@
 /**
  * leetcode题目：https://leetcode-cn.com/problems/valid-parentheses/description/
- * 方法一：使用java自带的Stack实现
+ * 方法二：使用自定义的ArrayStack实现
  */
 
 class ValidParentheses {
