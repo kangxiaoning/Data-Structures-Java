@@ -22,3 +22,19 @@ int getSize()
 boolean isEmpty()
 
 ```
+
+# 3. 数组队列的复杂度分析
+
+```
+void enqueue(E)         O(1)均摊
+E dequeue()             O(n)
+E getFront()            O(1)
+int getSize()           O(1)
+boolean isEmpty()       O(1)
+```
+
+dequeue复杂度为O(n)，因为dequeue的时候每次把整个数组索引为0的
+元素拿出后来，数组后面的元素都要向前挪一个一个位置，这是在动态数组
+中removeFirst方法的逻辑，复杂度显然是O(n)的。
+
+
