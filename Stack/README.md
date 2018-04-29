@@ -14,6 +14,7 @@ Stack
 
 - word/IDE等编辑器中的Undo操作（撤销）
 - 程序调用的系统栈（记录每次中断调用的点）
+- 括号匹配（编译器）
 
 
 # 3. 栈的实现
@@ -46,9 +47,10 @@ boolean isEmpty()
 
 # 4. 栈的时间复杂度分析
 
-ArrayStack<E>
 
 ```
+ArrayStack<E>
+
 - void push(E)          O(1) 均摊
 - E pop()               O(1) 均摊
 - E peek()              O(1)
@@ -56,4 +58,10 @@ ArrayStack<E>
 - boolean isEmpty()     O(1)
 
 ```
+
+# 5. leetcode题目练习
+
+[有效的括号](https://leetcode-cn.com/problems/valid-parentheses/description/)
+
+
 
