@@ -27,4 +27,16 @@ class Solution {
 
         return stack.isEmpty();
     }
+
+    public static void main(String[] args) {
+
+        // https://leetcode-cn.com/problems/valid-parentheses/description/
+        // 示例
+        
+        System.out.println((new Solution()).isValid("()"));
+        System.out.println((new Solution()).isValid("()[]{}"));
+        System.out.println((new Solution()).isValid("(]"));
+        System.out.println((new Solution()).isValid("([)]"));
+        System.out.println((new Solution()).isValid("{[]}"));
+    }
 }
