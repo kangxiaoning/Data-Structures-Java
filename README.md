@@ -9,5 +9,6 @@
 | 数组 | [Array](https://github.com/kangxiaoning/Data-Structures-Java/tree/master/Array) |
 | 栈 | [Stack](https://github.com/kangxiaoning/Data-Structures-Java/tree/master/Stack)|
 | 队列 | [Queue](https://github.com/kangxiaoning/Data-Structures-Java/tree/master/Queue) |
+| 链表 | [LinkedList](https://github.com/kangxiaoning/Data-Structures-Java/tree/master/LinkedList) |
 
 
