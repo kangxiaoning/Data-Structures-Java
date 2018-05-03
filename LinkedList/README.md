@@ -112,3 +112,17 @@ contains(e)         O(n)
 
 如果只对链表头进行操作：    O(1)
 
+
+# 6. 使用链表实现栈
+
+通过上面时间复杂度分析可知，对链表的头进行增删查，时间复杂度都是O(1)。满足这些条件相应的数据结构就是栈。
+
+``` 
+Interface Stack<E>  <--------- LinkedStack<E>
+void push(E)         implement
+E pop()
+E peek()
+int getSize()
+boolean isEmpty()
+
+```
