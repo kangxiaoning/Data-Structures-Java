@@ -126,3 +126,37 @@ int getSize()
 boolean isEmpty()
 
 ```
+
+# 6. 带有尾指针的链表
+
+为什么对于链表来说，在头部添加、删除都是O(1)呢？这是因为有一个head标记链表的头在哪儿。现在希望
+在链表的尾部进行相应的操作也是容易的，应该怎么做呢？再设立一个Node型的变量，来标记链表的尾部在
+哪。
+
+
+``` 
+    0--> 1--> 2--> 3--> 4--> Null
+    ^                   ^
+    |                   |
+   head                tail
+
+```
+
+即使在结尾标记了tail，从tail删除依然不容易。
+
+- tail添加容易
+- head删除容易
+
+因此，从head端删除元素，从tail端插入元素，实现如下。
+
+[使用带有尾指针的链表实现队列](https://github.com/kangxiaoning/Data-Structures-Java/blob/master/Queue/src/LinkedListQueue.java)
+
+``` 
+Interface Queue<E>  <--------- LinkedListQueue<E>
+int getSize();       implement
+boolean isEmpty();
+void enqueue(E e);
+E dequeue();
+E getFront();
+
+```
