@@ -29,17 +29,22 @@ public class Main {
 
         ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
         double[] time1 = testEnqueue(arrayQueue, opCount);
-        System.out.println("ArrayQueue, enqueue time: " + time1[0]
+        System.out.println("ArrayQueue,       enqueue time: " + time1[0]
                 + " s, dequeue time: " + time1[1] + " s");
 
         LoopQueue<Integer> loopQueue = new LoopQueue<>();
         double[] time2 = testEnqueue(loopQueue, opCount);
-        System.out.println("LoopQueue,  enqueue time: " + time2[0]
+        System.out.println("LoopQueue,        enqueue time: " + time2[0]
                 + " s, dequeue time: " + time2[1] + " s");
+
+        LinkedListQueue<Integer> linkedListQueue = new LinkedListQueue<>();
+        double[] time3 = testEnqueue(linkedListQueue, opCount);
+        System.out.println("LinkedListQueue,  enqueue time: " + time3[0]
+                + " s, dequeue time: " + time3[1] + " s");
     }
 }
 
-// MAC Air + java 9 上结果如下
+// MAC Air + java 9 + 100000 ,结果如下
 // 主要差距在 dequeue 操作上
 // 对于ArrayQueue而言，每一次dequeue时间复杂度是O(n)，而testQueue用for循环dequeue了n次，
 // 所以对ArrayQueue而言，testQueue的复杂度是O(n^2)
@@ -48,3 +53,10 @@ public class Main {
 
 // ArrayQueue, enqueue time: 0.037746523 s, dequeue time: 48.849298087 s
 // LoopQueue,  enqueue time: 0.015242599 s, dequeue time: 0.02549619 s
+
+
+// linux + openjdk 1.8 + output
+
+// ArrayQueue,       enqueue time: 0.01150321 s, dequeue time: 2.851513401 s
+// LoopQueue,        enqueue time: 0.007351944 s, dequeue time: 0.010359533 s
+// LinkedListQueue,  enqueue time: 0.007105114 s, dequeue time: 0.010284727 s

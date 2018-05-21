@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 .idea/
 *.class
 *.iml
+=======
+.idea
+*.iml
+out
+>>>>>>> 455746b00561827a2468f0045d8b02f4e9f6d189
