@@ -97,4 +97,35 @@ traverse(node.right)
 
 先访问节点，再访问左右子树。
 
+## 4.4 中序遍历
 
+访问该节点放在遍历该节点左子树和右子树中间。
+
+- 二分搜索树的中序遍历结果是顺序的
+
+
+```
+function traverse(node):
+    if (node == null)
+        return;
+        
+traverse(node.left)
+访问该节点
+traverse(node.right)
+```
+
+## 4.4 后序遍历
+
+后序遍历的一个应用：
+
+- 为二分搜索树释放内存
+
+```
+function traverse(node):
+    if (node == null)
+        return;
+        
+traverse(node.left)
+traverse(node.right)
+访问该节点
+```
