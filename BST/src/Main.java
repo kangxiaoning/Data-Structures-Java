@@ -15,7 +15,11 @@ public class Main {
         // 2  4     8  //
         /////////////////
 
+
         bst.preOrder();
+        System.out.println();
+
+        bst.preOrderNR();
         System.out.println();
 
         bst.inOrder();
