@@ -25,3 +25,11 @@ int getSize()
 boolean isEmpty() 
 ```
 
+对于Set，设计的是一个接口，所以可以采用不同的底层数据结构来实现。上
+一节用二分搜索树来实现了Set,这一节使用LinkedList来实现，叫做LinkedListSet。
+为什么要单拿出来LinkedList来实现Set呢？这是因为BST和LinkedList都
+属于动态数据结构，数据都是存储在Node中，只不过两个Node的定义不同。因此基于
+这两种数据结构为底层实现Set后，可以相应比较性能，通过比较希望看到BST
+的优势所在。
+
+
