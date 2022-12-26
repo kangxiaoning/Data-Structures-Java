@@ -69,9 +69,11 @@ public class Array<E> {
             resize(2 * data.length);
         }
 
+        // 将 data[index] 及之后的元素全部向后移动一位
         for (int i = size - 1; i >= index; i--) {
             data[i + 1] = data[i];
         }
+        // 将 e 插入到 data[index]
         data[index] = e;
         size++;
     }
